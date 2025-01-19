@@ -2,22 +2,32 @@
 
 version: '3.4'
 
+networks:
+  my_network: # Define a custom network
+    driver: bridge
+
 services:
-  ecom-ex01:
-    image: ecom-ex01
+  ecom-ex02:
+    image: ecom-c-ex02
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
       - 5001:5001
+    networks:
+      - my_network # Assign the custom network
+
   mongodb:
     image: mongo
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=mongopw
     ports:
-      - "27018:27017"
+      - "27017:27017"
     volumes:
       - mongodata:/data/db1
+    networks:
+      - my_network # Assign the custom network
+
 volumes:
   mongodata:

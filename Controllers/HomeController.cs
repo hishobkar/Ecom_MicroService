@@ -1,4 +1,6 @@
 using Example01.Models;
+using Example01.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -9,8 +11,47 @@ namespace Example01.Controllers;
 [Route("api/[controller]")]
 public class HomeController : ControllerBase
 {
+    private readonly AuthService _authService;
+    private readonly IConfiguration _configuration;
+
+    public HomeController(AuthService authService, IConfiguration configuration)
+    {
+        _authService = authService;
+        _configuration = configuration;
+    }
+
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(string username, string email, string password)
+    {
+        try
+        {
+            await _authService.RegisterAsync(username, email, password);
+            return Ok("User registered successfully");
+        } catch(Exception e)
+        {
+            return BadRequest(e.ToString());
+        }
+    }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(string username, string password)
+    {
+        var token = await _authService.AuthenticateAsync(username, password);
+        if (token == null)
+            return Unauthorized("Invalid username or password");
+
+        return Ok(new { Token = token });
+    }
     
+    [HttpGet("Get1")]
+    public IActionResult Get1()
+    {
+        var cs = _configuration["MongoDB:ConnectionString"];
+        return Ok(cs);
+    }
+
     [HttpGet("GetUserProfiles")]
+    [Authorize]
     public IActionResult GetUserProfiles()
     {
         // Dummy user profile data

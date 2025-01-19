@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Example01\\Example01.csproj": {}
+    "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {}
   },
   "projects": {
-    "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Example01\\Example01.csproj": {
+    "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Example01\\Example01.csproj",
+        "projectUniqueName": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
         "projectName": "Example01",
-        "projectPath": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Example01\\Example01.csproj",
+        "projectPath": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
         "packagesPath": "C:\\Users\\hisho\\.nuget\\packages\\",
-        "outputPath": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Example01\\obj\\",
+        "outputPath": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,9 +50,25 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.3.1, )"
             }
           },
           "imports": [
