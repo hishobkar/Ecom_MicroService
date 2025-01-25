@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C913EDEE-0F3A-99BC-E34A-02EE226F1FD2}|Example01.csproj|d:\\allfiles\\2025\\2025-jan-work-ecommerce\\ecom_microservice\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C913EDEE-0F3A-99BC-E34A-02EE226F1FD2}|Example01.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C913EDEE-0F3A-99BC-E34A-02EE226F1FD2}|Example01.csproj|d:\\allfiles\\2025\\2025-jan-work-ecommerce\\ecom_microservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C913EDEE-0F3A-99BC-E34A-02EE226F1FD2}|Example01.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C913EDEE-0F3A-99BC-E34A-02EE226F1FD2}|Example01.csproj|d:\\allfiles\\2025\\2025-jan-work-ecommerce\\ecom_microservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C913EDEE-0F3A-99BC-E34A-02EE226F1FD2}|Example01.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T08:12:50.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAADwvzEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T08:04:43.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-19T08:04:21.7Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

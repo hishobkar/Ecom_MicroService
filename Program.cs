@@ -11,7 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<ProductRepository>();
 builder.Services.AddScoped<Example01.Services.AuthService>();
+builder.Services.AddScoped<Example01.Services.ProductService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

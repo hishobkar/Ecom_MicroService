@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {}
+    "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {}
   },
   "projects": {
-    "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {
+    "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
+        "projectUniqueName": "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
         "projectName": "Example01",
-        "projectPath": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
+        "projectPath": "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
         "packagesPath": "C:\\Users\\hisho\\.nuget\\packages\\",
-        "outputPath": "D:\\AllFiles\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\obj\\",
+        "outputPath": "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
