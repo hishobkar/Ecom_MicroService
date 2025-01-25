@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "a8666da7-37ab-4483-96b9-793cbc0630a8",
+		"name": "Ecom-AuthAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1869725"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5001/api/Home/GetUserProfiles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNhbWFydGgiLCJyb2xlIjoiVXNlciIsIm5iZiI6MTczNzI3NTI4NiwiZXhwIjoxNzM3Mjc4ODg2LCJpYXQiOjE3MzcyNzUyODYsImlzcyI6IkF1dGhTZXJ2aWNlIiwiYXVkIjoiQXV0aFNlcnZpY2VVc2VycyJ9.5GfWDldZ8lSxW6utKHwsYoFsNPh4G8R0GH2jNcqhwRc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1001,\r\n    \"name\": \"John Doe\",\r\n    \"age\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Home/GetUserProfiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Home",
+						"GetUserProfiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/api/Home/register?username=samarth&email=testuser1@test.com&password=T@123",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/Home/register?username=admin&email=admin@test.com&password=Test@123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Home",
+						"register"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "email",
+							"value": "admin@test.com"
+						},
+						{
+							"key": "password",
+							"value": "Test@123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5001/api/Home/login?username=samarth&password=T@123",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/Home/login?username=admin&password=Test@123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Home",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "Test@123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

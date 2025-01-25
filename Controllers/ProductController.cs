@@ -1,5 +1,6 @@
 using Example01.Models;
 using Example01.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet("{name}")]
+    [Authorize]
     public async Task<IActionResult> GetProductByName(string name)
     {
         var product = await _productService.GetProductByNameAsync(name);
@@ -26,6 +28,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> AddProduct([FromBody] Product product)
     {
         try
@@ -39,6 +42,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize]
     public async Task<IActionResult> UpdateProduct(string id, [FromBody] Product updatedProduct)
     {
         try
@@ -54,6 +58,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize]
     public async Task<IActionResult> DeleteProduct(string id)
     {
         var result = await _productService.DeleteProductAsync(id);
@@ -63,6 +68,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet("search")]
+    [Authorize]
     public async Task<IActionResult> SearchProducts([FromQuery] string keyword)
     {
         var products = await _productService.SearchProductsAsync(keyword);
@@ -70,6 +76,7 @@ public class ProductController : ControllerBase
     }
     
     [HttpGet("all")]
+    [Authorize]
     public async Task<IActionResult> GetAllProducts([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
     {
         var products = await _productService.GetAllProductsAsync(pageNumber, pageSize);
