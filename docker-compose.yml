@@ -18,7 +18,10 @@ services:
       - my_network # Assign the custom network
     depends_on:
       - mongodb
-      
+    environment:
+      - MONGO_URI=mongodb://root:mongopw@mongodb:27017
+      - ASPNETCORE_ENVIRONMENT=Development
+
   mongodb:
     image: mongo
     environment:

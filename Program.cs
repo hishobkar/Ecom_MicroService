@@ -7,6 +7,11 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Load the MongoDB connection string from the environment variable (MONGO_URI)
+var mongoUri = Environment.GetEnvironmentVariable("MONGO_URI") ?? 
+               "mongodb://root:mongopw@mongodb:27017";  // Default if no environment variable is found
+
+
 // Add services to the container.
 
 builder.Services.AddSingleton<MongoDbContext>();

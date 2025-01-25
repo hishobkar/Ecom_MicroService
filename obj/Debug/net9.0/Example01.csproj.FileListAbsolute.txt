@@ -146,3 +146,4 @@ D:\All-Clean-Files\2025\2025-Jan-Work-Ecommerce\Ecom_MicroService\obj\Debug\net9
 D:\All-Clean-Files\2025\2025-Jan-Work-Ecommerce\Ecom_MicroService\obj\Debug\net9.0\Example01.pdb
 D:\All-Clean-Files\2025\2025-Jan-Work-Ecommerce\Ecom_MicroService\obj\Debug\net9.0\Example01.genruntimeconfig.cache
 D:\All-Clean-Files\2025\2025-Jan-Work-Ecommerce\Ecom_MicroService\obj\Debug\net9.0\ref\Example01.dll
+D:\All-Clean-Files\2025\2025-Jan-Work-Ecommerce\Ecom_MicroService\bin\Debug\net9.0\UnitTesting\postman_collections\01_test_authentication.json
