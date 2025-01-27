@@ -7,6 +7,19 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
+
 // Load the MongoDB connection string from the environment variable (MONGO_URI)
 var mongoUri = Environment.GetEnvironmentVariable("MONGO_URI") ?? 
                "mongodb://root:mongopw@mongodb:27017";  // Default if no environment variable is found
@@ -41,6 +54,7 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {}
+    "D:\\AccretionProjects\\ASys_Ecom\\Ecom_MicroService\\Example01.csproj": {}
   },
   "projects": {
-    "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj": {
+    "D:\\AccretionProjects\\ASys_Ecom\\Ecom_MicroService\\Example01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
+        "projectUniqueName": "D:\\AccretionProjects\\ASys_Ecom\\Ecom_MicroService\\Example01.csproj",
         "projectName": "Example01",
-        "projectPath": "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\Example01.csproj",
+        "projectPath": "D:\\AccretionProjects\\ASys_Ecom\\Ecom_MicroService\\Example01.csproj",
         "packagesPath": "C:\\Users\\hisho\\.nuget\\packages\\",
-        "outputPath": "D:\\All-Clean-Files\\2025\\2025-Jan-Work-Ecommerce\\Ecom_MicroService\\obj\\",
+        "outputPath": "D:\\AccretionProjects\\ASys_Ecom\\Ecom_MicroService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
