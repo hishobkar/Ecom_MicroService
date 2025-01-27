@@ -11,11 +11,6 @@ namespace Example01.Data
 
         public MongoDbContext(IConfiguration configuration)
         {
-            string? connection_str = Environment.GetEnvironmentVariable("MONGO_URI").ToString();
-
-            if(connection_str == null)
-                connection_str = configuration["MongoDB:ConnectionString"];
-
             var client = new MongoClient(configuration["MongoDB:ConnectionString"]);
             _database = client.GetDatabase(configuration["MongoDB:DatabaseName"]);
 

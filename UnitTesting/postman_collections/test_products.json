@@ -9,10 +9,20 @@
 		{
 			"name": "Get Product by Name",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5001/api/product/Bluetooth Bass Speaker",
+					"raw": "http://localhost:5001/api/product/getProductByName/Bluetooth Bass Speaker",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -21,6 +31,7 @@
 					"path": [
 						"api",
 						"product",
+						"getProductByName",
 						"Bluetooth Bass Speaker"
 					]
 				},
@@ -31,6 +42,16 @@
 		{
 			"name": "Add Product 1",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -43,7 +64,7 @@
 					"raw": "{\r\n    \"id\": \"65a1234567890abcdef12345\",\r\n    \"name\": \"Sample Product\",\r\n    \"description\": \"A test product for e-commerce\",\r\n    \"price\": 99.99,\r\n    \"category\": \"Electronics\",\r\n    \"stockQuantity\": 100,\r\n    \"imageUrls\": [\r\n        \"https://example.com/image1.jpg\",\r\n        \"https://example.com/image2.jpg\"\r\n    ],\r\n    \"tags\": [\r\n        \"electronics\",\r\n        \"gadgets\"\r\n    ],\r\n    \"ratings\": [\r\n        {\r\n            \"userId\": \"65a9876543210abcdef98765\",\r\n            \"rating\": 5,\r\n            \"comment\": \"Great product!\",\r\n            \"ratedAt\": \"2024-01-25T10:00:00Z\"\r\n        }\r\n    ]\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/product",
+					"raw": "http://localhost:5001/api/product/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -51,7 +72,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"product"
+						"product",
+						"create"
 					]
 				},
 				"description": "Add a new product"
@@ -61,6 +83,16 @@
 		{
 			"name": "Update Product",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [
 					{
@@ -73,7 +105,7 @@
 					"raw": "{\r\n    \"id\": \"65a1234567890abcdef12344\",\r\n    \"name\": \"Bluetooth Bass Speaker\",\r\n    \"description\": \"Portable Bluetooth speaker with 360-degree sound\",\r\n    \"price\": 89.99,\r\n    \"category\": \"Audio\",\r\n    \"stockQuantity\": 80,\r\n    \"imageUrls\": [\r\n        \"https://example.com/speaker1.jpg\",\r\n        \"https://example.com/speaker2.jpg\"\r\n    ],\r\n    \"tags\": [\r\n        \"bluetooth\",\r\n        \"speaker\",\r\n        \"portable\"\r\n    ],\r\n    \"ratings\": [\r\n        {\r\n            \"userId\": \"65a9876543210abcdef98764\",\r\n            \"rating\": 5,\r\n            \"comment\": \"Amazing bass and long battery life!\",\r\n            \"ratedAt\": \"2024-01-21T14:00:00Z\"\r\n        }\r\n    ]\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/product/65a1234567890abcdef12344",
+					"raw": "http://localhost:5001/api/product/update/65a1234567890abcdef12344",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -82,6 +114,7 @@
 					"path": [
 						"api",
 						"product",
+						"update",
 						"65a1234567890abcdef12344"
 					]
 				},
@@ -92,10 +125,20 @@
 		{
 			"name": "Delete Product",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5001/api/product/65a1234567890abcdef12345",
+					"raw": "http://localhost:5001/api/product/delete/65a1234567890abcdef12342",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,7 +147,8 @@
 					"path": [
 						"api",
 						"product",
-						"65a1234567890abcdef12345"
+						"delete",
+						"65a1234567890abcdef12342"
 					]
 				},
 				"description": "Delete a product by its ID"
@@ -114,6 +158,16 @@
 		{
 			"name": "Search Products",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -143,7 +197,14 @@
 			"name": "Add Product 2",
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -157,7 +218,7 @@
 					"raw": "{\r\n    \"id\": \"65a1234567890abcdef12340\",\r\n    \"name\": \"Wireless Headphones\",\r\n    \"description\": \"Noise-cancelling over-ear headphones with Bluetooth 5.0\",\r\n    \"price\": 199.99,\r\n    \"category\": \"Electronics\",\r\n    \"stockQuantity\": 50,\r\n    \"imageUrls\": [\r\n      \"https://example.com/headphone1.jpg\",\r\n      \"https://example.com/headphone2.jpg\"\r\n    ],\r\n    \"tags\": [\r\n      \"audio\",\r\n      \"bluetooth\",\r\n      \"wireless\"\r\n    ],\r\n    \"ratings\": [\r\n      {\r\n        \"userId\": \"65a9876543210abcdef98760\",\r\n        \"rating\": 4,\r\n        \"comment\": \"Great sound quality!\",\r\n        \"ratedAt\": \"2024-01-25T12:00:00Z\"\r\n      }\r\n    ]\r\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/product",
+					"raw": "http://localhost:5001/api/product/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -165,7 +226,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"product"
+						"product",
+						"create"
 					]
 				}
 			},
@@ -175,7 +237,14 @@
 			"name": "Add Product 3",
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -189,7 +258,7 @@
 					"raw": "{\r\n    \"id\": \"65a1234567890abcdef12341\",\r\n    \"name\": \"Smartphone\",\r\n    \"description\": \"Latest model smartphone with 128GB storage and 8GB RAM\",\r\n    \"price\": 799.99,\r\n    \"category\": \"Mobile Phones\",\r\n    \"stockQuantity\": 200,\r\n    \"imageUrls\": [\r\n      \"https://example.com/phone1.jpg\",\r\n      \"https://example.com/phone2.jpg\"\r\n    ],\r\n    \"tags\": [\r\n      \"smartphone\",\r\n      \"android\",\r\n      \"5g\"\r\n    ],\r\n    \"ratings\": [\r\n      {\r\n        \"userId\": \"65a9876543210abcdef98761\",\r\n        \"rating\": 5,\r\n        \"comment\": \"Excellent phone with great battery life.\",\r\n        \"ratedAt\": \"2024-01-24T15:00:00Z\"\r\n      }\r\n    ]\r\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/product",
+					"raw": "http://localhost:5001/api/product/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -197,7 +266,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"product"
+						"product",
+						"create"
 					]
 				}
 			},
@@ -207,7 +277,14 @@
 			"name": "Add Product 4",
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -221,7 +298,7 @@
 					"raw": "{\r\n    \"id\": \"65a1234567890abcdef12342\",\r\n    \"name\": \"Gaming Laptop\",\r\n    \"description\": \"High-performance gaming laptop with RTX 3070 GPU\",\r\n    \"price\": 1499.99,\r\n    \"category\": \"Computers\",\r\n    \"stockQuantity\": 30,\r\n    \"imageUrls\": [\r\n      \"https://example.com/laptop1.jpg\",\r\n      \"https://example.com/laptop2.jpg\"\r\n    ],\r\n    \"tags\": [\r\n      \"gaming\",\r\n      \"laptop\",\r\n      \"RTX\"\r\n    ],\r\n    \"ratings\": [\r\n      {\r\n        \"userId\": \"65a9876543210abcdef98762\",\r\n        \"rating\": 5,\r\n        \"comment\": \"Runs all modern games smoothly!\",\r\n        \"ratedAt\": \"2024-01-23T18:00:00Z\"\r\n      }\r\n    ]\r\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/product",
+					"raw": "http://localhost:5001/api/product/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -229,7 +306,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"product"
+						"product",
+						"create"
 					]
 				}
 			},
@@ -239,7 +317,14 @@
 			"name": "Add Product 5",
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -253,7 +338,7 @@
 					"raw": "{\r\n    \"id\": \"65a1234567890abcdef12343\",\r\n    \"name\": \"Smart Watch\",\r\n    \"description\": \"Water-resistant smartwatch with heart rate monitor\",\r\n    \"price\": 129.99,\r\n    \"category\": \"Wearables\",\r\n    \"stockQuantity\": 150,\r\n    \"imageUrls\": [\r\n      \"https://example.com/watch1.jpg\",\r\n      \"https://example.com/watch2.jpg\"\r\n    ],\r\n    \"tags\": [\r\n      \"smartwatch\",\r\n      \"fitness\",\r\n      \"wearable\"\r\n    ],\r\n    \"ratings\": [\r\n      {\r\n        \"userId\": \"65a9876543210abcdef98763\",\r\n        \"rating\": 4,\r\n        \"comment\": \"Very useful for tracking fitness goals.\",\r\n        \"ratedAt\": \"2024-01-22T09:00:00Z\"\r\n      }\r\n    ]\r\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/product",
+					"raw": "http://localhost:5001/api/product/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -261,7 +346,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"product"
+						"product",
+						"create"
 					]
 				}
 			},
@@ -271,7 +357,14 @@
 			"name": "Add Product 6",
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -285,27 +378,7 @@
 					"raw": "{\r\n    \"id\": \"65a1234567890abcdef12344\",\r\n    \"name\": \"Bluetooth Speaker\",\r\n    \"description\": \"Portable Bluetooth speaker with 360-degree sound\",\r\n    \"price\": 89.99,\r\n    \"category\": \"Audio\",\r\n    \"stockQuantity\": 80,\r\n    \"imageUrls\": [\r\n      \"https://example.com/speaker1.jpg\",\r\n      \"https://example.com/speaker2.jpg\"\r\n    ],\r\n    \"tags\": [\r\n      \"bluetooth\",\r\n      \"speaker\",\r\n      \"portable\"\r\n    ],\r\n    \"ratings\": [\r\n      {\r\n        \"userId\": \"65a9876543210abcdef98764\",\r\n        \"rating\": 5,\r\n        \"comment\": \"Amazing bass and long battery life!\",\r\n        \"ratedAt\": \"2024-01-21T14:00:00Z\"\r\n      }\r\n    ]\r\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/product",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						"api",
-						"product"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Products",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5001/api/product/all?pageNumber=1&pageSize=2",
+					"raw": "http://localhost:5001/api/product/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -314,7 +387,38 @@
 					"path": [
 						"api",
 						"product",
-						"all"
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/product/getAll?pageNumber=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"product",
+						"getAll"
 					],
 					"query": [
 						{
@@ -323,12 +427,41 @@
 						},
 						{
 							"key": "pageSize",
-							"value": "2"
+							"value": "5"
 						}
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE3Mzc5OTgzMTgsImV4cCI6MTczODAwMTkxOCwiaWF0IjoxNzM3OTk4MzE4LCJpc3MiOiJBdXRoU2VydmljZSIsImF1ZCI6IkF1dGhTZXJ2aWNlVXNlcnMifQ.wK9QMyMiSFeDppGx5aWi3zf2rEvdvRtsu-2cnqxl8zY",
+			"type": "string"
 		}
 	]
 }

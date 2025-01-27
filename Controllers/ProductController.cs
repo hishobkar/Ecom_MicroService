@@ -17,7 +17,8 @@ public class ProductController : ControllerBase
         _productService = productService;
     }
 
-    [HttpGet("{name}")]
+    [HttpGet]
+    [Route("getProductByName/{name}")]
     [Authorize]
     public async Task<IActionResult> GetProductByName(string name)
     {
@@ -28,6 +29,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost]
+    [Route("create")]
     [Authorize]
     public async Task<IActionResult> AddProduct([FromBody] Product product)
     {
@@ -41,7 +43,8 @@ public class ProductController : ControllerBase
         }
     }
 
-    [HttpPut("{id}")]
+    [HttpPut]
+    [Route("update/{id}")]
     [Authorize]
     public async Task<IActionResult> UpdateProduct(string id, [FromBody] Product updatedProduct)
     {
@@ -57,7 +60,8 @@ public class ProductController : ControllerBase
         }
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete]
+    [Route("delete/{id}")]
     [Authorize]
     public async Task<IActionResult> DeleteProduct(string id)
     {
@@ -67,7 +71,8 @@ public class ProductController : ControllerBase
         return NoContent();
     }
 
-    [HttpGet("search")]
+    [HttpGet]
+    [Route("search")]
     [Authorize]
     public async Task<IActionResult> SearchProducts([FromQuery] string keyword)
     {
@@ -75,7 +80,8 @@ public class ProductController : ControllerBase
         return Ok(products);
     }
     
-    [HttpGet("all")]
+    [HttpGet]
+    [Route("getAll")]
     [Authorize]
     public async Task<IActionResult> GetAllProducts([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
     {
